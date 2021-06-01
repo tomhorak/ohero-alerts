@@ -1,0 +1,53 @@
+#notification-area {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 1050;
+	width: 100%;
+	padding: 1rem;
+}
+
+.sticky-top-alert {
+	position: -webkit-sticky;
+	position: sticky;
+	top: 0;
+	z-index: 1040;
+}
+.admin-bar #notification-area { top: 28px; }
+#notification-area.hidden { display: none; }
+.logged-in #notification-area.hidden { display: block; } /* For logged-in users, we always show  */
+#notification-area h3 { font-weight: bold; clear:none!important; margin: 0; padding: 0; color: #222; }
+#notification-area p { margin: 0 0 10px; color: #222; }
+
+/********************
+* colors 
+********************/
+
+/* blue - default */
+#notification-area { background: #d7e9f3; border-bottom: 1px solid #86b2c9; }
+#notification-area a { color: #999; }
+#remove-alert { display: block; float: right; margin: 10px 0 0 10px; border: 1px solid #86b2c9; padding: 1px 6px; color: #333; }
+#remove-alert:hover { text-decoration: none; background: #86b2c9; color: #fff; }
+
+/* red */
+#notification-area.red { background: #c65151; border-color: #d75454; }
+#notification-area.red p, #notification-area.red h3 { color: #222; }
+#notification-area.red a { color: #666; }
+#notification-area.red #remove-alert { border-color: #d75454; }
+#notification-area.red #remove-alert:hover {background: #d75454; }
+
+/* Yellow */
+/*#notification-area.yellow { background: #fee333; border-color: #c7ad02; }*/
+#notification-area.yellow { background: #ecd53d; border-color: #c7ad02; }
+#notification-area.yellow p, #notification-area.red h3 { color: #222; }
+#notification-area.yellow a { color: #666; }
+#notification-area.yellow #remove-alert { border-color: #c7ad02; }
+#notification-area.yellow #remove-alert:hover {background: #c7ad02; }
+
+/* green */
+/*#notification-area.green { background: #5dd428; border-color: #46b117; }*/
+#notification-area.green { background: #7bce56; border-color: #46b117; }
+#notification-area.green p, #notification-area.red h3 { color: #222; }
+#notification-area.green a { color: #666; }
+#notification-area.green #remove-alert { border-color: #46b117; }
+#notification-area.green #remove-alert:hover {background: #46b117; }
